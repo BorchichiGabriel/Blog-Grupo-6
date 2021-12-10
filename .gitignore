@@ -1,2 +1,2 @@
 *.pyc
-blog/settings/local.py
+blog/blog/settings/local.py
