@@ -16,6 +16,15 @@
         {% endfor %}
         
     </ul>
-    <p><a href="{% url 'login' %}">LOGIN</a></p>
+    
+    {% if user.is_authenticated %}
+        <h1>Hola {{user}}</h1>
+        <p><a href="{% url 'logout' %}">Cerrar Sesion</a></p>
+    {% else %}
+
+        <p><a href="{% url 'login' %}">Inicie Sesion</a></p>
+    {% endif %}
+        
+    
 </body>
 </html>
